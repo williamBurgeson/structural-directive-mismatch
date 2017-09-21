@@ -26,7 +26,7 @@ export class UnlessDirective {
     private templateRef: TemplateRef<any>,
     private viewContainer: ViewContainerRef) { }
 
-  @Input() set appUnless(condition: boolean) {
+  @Input() set __appUnless(condition: boolean) {
     if (!condition && !this.hasView) {
       this.viewContainer.createEmbeddedView(this.templateRef);
       this.hasView = true;
