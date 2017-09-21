@@ -5,6 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+//import { UnlessDirective } from './unless.directive';
+//import { NgComponentOutlet2Directive } from './ng-component-outlet2.directive';
+
+import { SharedModule } from './shared/shared.module';
+import { StuffModule } from './stuff/stuff.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StuffModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
